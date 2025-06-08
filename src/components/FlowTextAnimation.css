@@ -1,0 +1,34 @@
+.container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px; /* Adjust as needed */
+    pointer-events: none; /* Allows click-through if needed */
+    z-index: 100;
+  }
+  
+  .flowing-text {
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 5;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    pointer-events: none;
+  }
+  
+  .astro-text {
+    top: 10%;
+    /* left: -200px; */
+    color: #ffff;
+    transform: rotate(-5deg);
+  }
+  
+  .mind-body-text {
+    top: 60%;
+    /* left: -200px; */
+    color: #ffffff;
+    transform: rotate(3deg);
+  }
+  

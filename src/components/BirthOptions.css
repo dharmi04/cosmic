@@ -209,6 +209,19 @@
   left: 100%;
 }
 
+/* Large tablets and medium screens */
+@media (max-width: 1024px) {
+  .option {
+    width: 260px;
+    height: 260px;
+  }
+
+  .options-wrapper {
+    gap: 40px;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
   .form-title h2 {
     font-size: 2rem;
@@ -221,15 +234,43 @@
   }
 
   .option {
-    width: 250px;
-    height: 250px;
+    width: 240px;
+    height: 240px;
+  }
+
+  .icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .option label {
+    font-size: 1.15rem;
   }
   
   .birth-input {
     font-size: 0.9rem;
+    padding: 10px 12px;
   }
 }
 
+/* Small tablets and large phones */
+@media (max-width: 600px) {
+  .option {
+    width: 220px;
+    height: 220px;
+  }
+
+  .icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .option label {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile phones */
 @media (max-width: 480px) {
   .birth-container {
     padding: 15px;
@@ -240,17 +281,61 @@
   }
   
   .option {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
   
   .icon {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
+    margin-bottom: 12px;
+  }
+
+  .option label {
+    font-size: 1rem;
+    margin: 0 0 12px 0;
+  }
+  
+  .birth-input {
+    font-size: 0.85rem;
+    padding: 8px 10px;
   }
   
   .submit-btn {
     padding: 12px 30px;
     font-size: 1rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .option {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+  }
+
+  .option label {
+    font-size: 0.95rem;
+    margin: 0 0 10px 0;
+  }
+  
+  .birth-input {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .form-title h2 {
+    font-size: 1.6rem;
+  }
+
+  .submit-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
   }
 }

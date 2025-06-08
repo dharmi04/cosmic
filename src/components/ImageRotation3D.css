@@ -1,7 +1,88 @@
 .three-container {
-    width: 100vw;
-
-
-    left: 0;
-  }
+  width: 100%;
+  position: relative;
   
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+.three-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .three-container {
+    height: 100vh;
+  }
+}
+
+/* Tablet styles */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .three-container {
+    height: 100vh;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .three-container {
+    height: 100vh;
+    min-height: 500px; /* Ensure minimum height on very short screens */
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 767px) and (orientation: landscape) {
+  .three-container {
+    height: 100vh;
+    min-height: 400px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .three-container {
+    height: 100vh;
+    min-height: 450px;
+  }
+}
+
+/* High DPI displays optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .three-container canvas {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Performance optimization for low-end devices */
+@media (max-width: 768px) {
+  .three-container {
+    /* Reduce complexity on mobile */
+    will-change: transform;
+    transform: translateZ(0);
+  }
+}
+
+/* Prevent scrolling issues on mobile */
+.three-container {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Loading state */
+.three-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+  z-index: -1;
+}

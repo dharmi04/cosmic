@@ -1,0 +1,138 @@
+/* Global Mouse Light Effect Styles */
+:root {
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+    --light-color-primary: rgba(0, 188, 212, 0.8);
+    --light-color-secondary: rgba(0, 188, 212, 0.4);
+    --light-color-tertiary: rgba(0, 188, 212, 0.1);
+  }
+  
+  /* Enhanced cursor styles */
+  body {
+    cursor: none; /* Hide default cursor for full effect */
+  }
+  
+  /* Alternative: Keep cursor but make it blend with the light */
+  body.light-cursor {
+    cursor: crosshair;
+  }
+  
+  /* Main light orb animations */
+  .mouse-light-orb {
+    animation: pulse 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      filter: blur(0.5px);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1.1);
+      filter: blur(1px);
+    }
+  }
+  
+  /* Trail dots with staggered animation */
+  .mouse-trail-dot:nth-child(even) {
+    animation: twinkle 1.5s ease-in-out infinite;
+  }
+  
+  .mouse-trail-dot:nth-child(odd) {
+    animation: twinkle 2s ease-in-out infinite;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+  
+  /* Global light overlay with subtle animation */
+  .mouse-light-overlay {
+    animation: breathe 4s ease-in-out infinite;
+  }
+  
+  @keyframes breathe {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  /* Hover effects for interactive elements */
+  .mouse-light-interactive {
+    transition: all 0.3s ease;
+  }
+  
+  .mouse-light-interactive:hover {
+    box-shadow: 
+      0 0 20px var(--light-color-secondary),
+      0 0 40px var(--light-color-tertiary);
+    transform: scale(1.02);
+  }
+  
+  /* Special effects for dark backgrounds */
+  .dark-section {
+    position: relative;
+  }
+  
+  .dark-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(0, 188, 212, 0.03) 0%,
+      transparent 50%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Performance optimizations */
+  .mouse-light-orb,
+  .mouse-trail-dot,
+  .mouse-light-overlay {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    .mouse-light-orb {
+      width: 15px;
+      height: 15px;
+    }
+    
+    .mouse-trail-dot {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    
+    /* Reduce trail on mobile for performance */
+    .mouse-trail-dot:nth-child(n+6) {
+      display: none;
+    }
+  }
+  
+  /* Reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .mouse-light-orb,
+    .mouse-trail-dot,
+    .mouse-light-overlay {
+      animation: none;
+    }
+    
+    .mouse-light-orb {
+      transition: transform 0.3s ease;
+    }
+  }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './BirthOptions.css';
-import placeIcon from '../assets/icons/location.png';
+import placeIcon from '../assets/icons/Location.png';
 import nameIcon from '../assets/icons/birth.png';
 import dateIcon from '../assets/icons/dob.png';
 

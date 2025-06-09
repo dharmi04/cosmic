@@ -12,9 +12,9 @@
 
 2. **Start local dev server**
     ```bash
-    npm start
+    npm run dev
     ```
-   Opens at `http://localhost:3000/`.
+   Opens at `http://localhost:5173/`.
 
 3. **Build for production**
     ```bash
@@ -46,13 +46,15 @@ Animated using GSAP loaded dynamically from CDN. Text flows across the screen in
 ### 6. **Cosmic-Themed UI**
 `BirthOption.jsx` provides a birth name input and zodiac-element selector. Styled with subtle glows, round backgrounds, and seamlessly layered over the 3D canvas.
 
+###7. **Mouse Following Light**
+`MouseLightEffect.jsx`A glowing light orb follows the mouse horizontally, smoothly interpolated with lerp() to add interactive cosmic ambiance
+
 ---
 
 
 ##  Developer Notes
 
 - `.glb` assets kept in `public/models/`
-- Textures in `public/images/`
 - Imported in React as plain paths (`/models/file.glb`). No special config required.
 - Cleaned up Three.js resources on unmount to prevent memory leaks.
 
@@ -65,4 +67,3 @@ This project demonstrates:
 - Multiple animation techniques (scroll, orbit/floating, GSAP)
 - Responsive, astrological UI integrating 2D and 3D seamlessly
 
-Feel free to explore, tweak, and add your own cosmic flair 😄

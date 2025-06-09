@@ -46,7 +46,7 @@ Animated using GSAP loaded dynamically from CDN. Text flows across the screen in
 ### 6. **Cosmic-Themed UI**
 `BirthOption.jsx` provides a birth name input and zodiac-element selector. Styled with subtle glows, round backgrounds, and seamlessly layered over the 3D canvas.
 
-###7. **Mouse Following Light**
+### 7. **Mouse Following Light**
 `MouseLightEffect.jsx`A glowing light orb follows the mouse horizontally, smoothly interpolated with lerp() to add interactive cosmic ambiance
 
 ---

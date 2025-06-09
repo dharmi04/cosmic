@@ -1,4 +1,3 @@
-/* Global Mouse Light Effect Styles */
 :root {
     --mouse-x: 50%;
     --mouse-y: 50%;
@@ -7,17 +6,14 @@
     --light-color-tertiary: rgba(0, 188, 212, 0.1);
   }
   
-  /* Enhanced cursor styles */
   body {
-    cursor: none; /* Hide default cursor for full effect */
+    cursor: none; 
   }
   
-  /* Alternative: Keep cursor but make it blend with the light */
   body.light-cursor {
     cursor: crosshair;
   }
   
-  /* Main light orb animations */
   .mouse-light-orb {
     animation: pulse 2s ease-in-out infinite alternate;
   }
@@ -33,7 +29,6 @@
     }
   }
   
-  /* Trail dots with staggered animation */
   .mouse-trail-dot:nth-child(even) {
     animation: twinkle 1.5s ease-in-out infinite;
   }
@@ -51,7 +46,6 @@
     }
   }
   
-  /* Global light overlay with subtle animation */
   .mouse-light-overlay {
     animation: breathe 4s ease-in-out infinite;
   }
@@ -65,7 +59,6 @@
     }
   }
   
-  /* Hover effects for interactive elements */
   .mouse-light-interactive {
     transition: all 0.3s ease;
   }
@@ -77,7 +70,6 @@
     transform: scale(1.02);
   }
   
-  /* Special effects for dark backgrounds */
   .dark-section {
     position: relative;
   }
@@ -98,7 +90,6 @@
     z-index: 1;
   }
   
-  /* Performance optimizations */
   .mouse-light-orb,
   .mouse-trail-dot,
   .mouse-light-overlay {
@@ -107,7 +98,6 @@
     perspective: 1000px;
   }
   
-  /* Mobile optimizations */
   @media (max-width: 768px) {
     .mouse-light-orb {
       width: 15px;
@@ -118,13 +108,11 @@
       transform: translate(-50%, -50%) scale(0.8);
     }
     
-    /* Reduce trail on mobile for performance */
     .mouse-trail-dot:nth-child(n+6) {
       display: none;
     }
   }
   
-  /* Reduced motion preferences */
   @media (prefers-reduced-motion: reduce) {
     .mouse-light-orb,
     .mouse-trail-dot,

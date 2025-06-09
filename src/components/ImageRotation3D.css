@@ -26,15 +26,13 @@
   }
 }
 
-/* Mobile styles */
 @media (max-width: 767px) {
   .three-container {
     height: 100vh;
-    min-height: 500px; /* Ensure minimum height on very short screens */
+    min-height: 500px; 
   }
 }
 
-/* Landscape mobile optimization */
 @media (max-width: 767px) and (orientation: landscape) {
   .three-container {
     height: 100vh;
@@ -42,7 +40,6 @@
   }
 }
 
-/* Very small screens */
 @media (max-width: 480px) {
   .three-container {
     height: 100vh;
@@ -50,7 +47,6 @@
   }
 }
 
-/* High DPI displays optimization */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .three-container canvas {
     image-rendering: -webkit-optimize-contrast;
@@ -58,16 +54,13 @@
   }
 }
 
-/* Performance optimization for low-end devices */
 @media (max-width: 768px) {
   .three-container {
-    /* Reduce complexity on mobile */
     will-change: transform;
     transform: translateZ(0);
   }
 }
 
-/* Prevent scrolling issues on mobile */
 .three-container {
   touch-action: none;
   user-select: none;
@@ -75,7 +68,6 @@
   -webkit-touch-callout: none;
 }
 
-/* Loading state */
 .three-container::before {
   content: '';
   position: absolute;

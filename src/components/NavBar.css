@@ -1,0 +1,112 @@
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: auto;
+  }
+  
+  .navbar-container {
+    background: #C4F8FF;
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-brand {
+    font-family: 'Favorit', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .nav-logo {
+    height: 30px; /* Adjust based on design */
+    width: auto;
+    object-fit: contain;
+  }
+  
+  
+  .nav-link {
+    text-decoration: none;
+    font-family: 'Favorit', serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    letter-spacing: -0.2px;
+  }
+  
+  .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+  }
+  
+  .nav-link-highlight {
+    background: rgba(0, 63, 71, 1);
+    color: white;
+    font-weight: 600;
+  }
+  
+  .nav-link-highlight:hover {
+    background: #0a3a47;
+    transform: translateY(-1px);
+  }
+  
+  .nav-link-ai {
+   background: linear-gradient(89.95deg, #0091D5 -40.98%, #C5F8FF 36.73%, #FFFFFF 145.69%);
+    color: #0f4c5c;
+    font-weight: 600;
+    border: 1px solid rgba(102, 204, 204, 0.3);
+  }
+  
+  .nav-link-ai:hover {
+    background: rgba(102, 204, 204, 0.3);
+    transform: translateY(-1px);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-container {
+      padding: 10px 16px;
+      gap: 16px;
+    }
+    
+    .nav-links {
+      gap: 12px;
+    }
+    
+    .nav-link {
+      font-size: 8px;
+      padding: 6px 12px;
+    }
+    
+    .nav-brand {
+      font-size: 18px;
+    }
+    .nav-logo {
+      height: 18px;
+      width: auto;
+      object-fit: contain;
+    }
+    .nav-link-ai {
+      font-size: 6px;
+     }
+     .nav-link {
+      font-size: 6px;
+      
+    }
+  }

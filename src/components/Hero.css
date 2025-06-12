@@ -75,6 +75,7 @@
   .dropping-texts > div {
     font-size: 0px;
     opacity: 0;
+    padding-left: 20px;
     margin-left: -30px;
     position: absolute;
     font-weight: 300;

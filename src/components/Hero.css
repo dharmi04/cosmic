@@ -40,21 +40,21 @@
   .hero-title {
     font-size: 3.5rem;
     font-weight: 400;
-    color: white;
+    color: rgba(196, 248, 255, 1);
     line-height: 1.1;
     letter-spacing: -2px;
-    font-family: 'Recoleta', serif;
+    font-family: 'Recoleta';
+    
+  src: url('../assets/fonts/Recoleta Regular.otf') format('opentype');
   }
-  
   .hero-subtitle {
     font-size: 1.25rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(196, 248, 255, 1);
     line-height: 1.6;
-    margin-top: 20px;
-    font-family: 'Chillax', sans-serif;
+    font-family: 'Chillax';
+  src: url('../assets/fonts/Chillax-Regular.otf') format('opentype');
   }
-  
   .hero-image img {
     width: 100%;
     max-width: 400px;
@@ -82,7 +82,7 @@
     white-space: nowrap;
     left: 0;
     top: 0;
-    transition: all 0.3s ease;
+    transition: transform 0.6s ease, font-size 0.6s ease, margin 0.6s ease, opacity 0.6s ease
   }
   
   .dropping-texts > div:nth-child(1) {

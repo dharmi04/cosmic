@@ -64,14 +64,15 @@
   border-radius: 20px;
   padding: 10px 20px;
   font-size: 0.9rem;
-  color: white;
+  color:rgba(230, 252, 255, 1);
+  ;
   cursor: pointer;
   font-family: 'Aquire';
 }
 
 .aiyuh-btn {
   background: linear-gradient(89.95deg, #0091D5 -40.98%, #C5F8FF 36.73%, #FFFFFF 145.69%);
-  color: #000;
+  color: rgba(0, 63, 71, 1);
   border: none;
   border-radius: 20px;
   padding: 10px 20px;

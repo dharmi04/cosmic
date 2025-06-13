@@ -9,7 +9,8 @@ import model from '../../assets/3d/3-Shapes.glb'
 export function Model(props) {
   const { nodes, materials } = useGLTF(model)
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={1} position={[0.5, -0.5, -3]}>
+
       <mesh
         castShadow
         receiveShadow

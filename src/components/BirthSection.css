@@ -1,111 +1,118 @@
-/* @font-face {
-  font-family: 'CustomFont';
-  src: url('../assets/fonts/YourFont.otf') format('opentype');
-} */
 @import url('https://fonts.cdnfonts.com/css/recoleta');
 @import url('https://fonts.cdnfonts.com/css/aquire');
 
-.banner {
-  background-image: url('../assets/bg-2.png');
-  background-size: cover;
-  background-position: center;
+.birth-section {
+  position: relative;
   height: 100vh;
   width: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: url('../assets/bg-2.png') no-repeat center center/cover;
+  font-family: 'Aquire', sans-serif;
+  color: white;
+  overflow: hidden;
 }
 
-.banner-overlay {
-  width: 100%;
-  padding: 20px;
-  color: #fff;
-  text-align: center;
-}
-
-.banner-top {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  right: 0;
-  width: calc(100% - 80px);
-  margin: 0 40px;
+.top-bar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-.left,
-.center,
-.right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.left {
-  justify-content: flex-start;
-}
-
-.right {
-  justify-content: flex-end;
+  padding: 20px 40px;
+  font-size: 1.2rem;
 }
 
 .logo {
-  max-height: 40px;
-  width: auto;
-}
-
-.self-care-btn {
-  background-color: #3A7CA5;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-size: 0.9rem;
-  color:rgba(230, 252, 255, 1);
-  cursor: pointer;
-  font-family: 'Aquire';
+  font-weight: bold;
 }
 
 .aiyuh-btn {
   background: linear-gradient(89.95deg, #0091D5 -40.98%, #C5F8FF 36.73%, #FFFFFF 145.69%);
-  color: rgba(0, 63, 71, 1);
-  border: none;
+  color: #000;
+  padding: 12px;
   border-radius: 20px;
-  padding: 10px 20px;
+  text-decoration: none;
   font-size: 0.9rem;
-  cursor: pointer;
+}
+.self-care-button {
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 63, 71, 1);
+  color: white;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
   font-family: 'Aquire';
+  z-index: 2;
 }
 
-.banner-content {
-  max-width: 800px;
-  margin: 0 auto;
+
+.main-text {
+  text-align: center;
   font-size: 1.5rem;
-  line-height: 1.8;
+  margin-top: 20px;
+  line-height: 1.6;
   font-family: 'Recoleta';
+  color:rgba(196, 248, 255, 1);
+
 }
 
-@media (max-width: 768px) {
-  .banner-top {
-    width: calc(100% - 40px);
-    margin: 0 20px;
-  }
+.model-wrapper {
+  position: relative;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  height: 400px;
+  margin-top: 10px;
+}
 
-  .banner-content {
-    font-size: 1.2rem;
-    padding: 0 10px;
-  }
+.input-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: -40px;
+}
 
-  .self-care-btn,
-  .aiyuh-btn {
-    font-size: 0.8rem;
-    padding: 8px 16px;
-  }
+.birth-btn {
+  background-color: #073D4A;
+  border: none;
+  border-radius: 50% / 40%;
+  padding: 25px 30px;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Aquire', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
 
-  .logo {
-    max-height: 30px;
+.birth-btn:hover {
+  transform: scale(1.05);
+}
+
+.birth-btn img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.scroll-indicator {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+  animation: bounce 2s infinite;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
   }
 }

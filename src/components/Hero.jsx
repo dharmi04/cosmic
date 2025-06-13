@@ -1,31 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Hero.css';
 import NavBar from './NavBar';
 import wellnessImage from '../assets/Hero-image.png';
 
 const rotatingWords = [
-  "Balance",
-  "Energy",
-  "Relationships",
-  "Mindfulness",
-  "Prosperity",
-  "Astrology",
-  "Numerology",
-  "Love",
-  "Vastu",
-  "Healing Rituals",
-  "Meditation",
-  "Spiritual Wisdom"
+  "Balance", "Energy", "Relationships", "Mindfulness", "Prosperity", "Astrology",
+  "Numerology", "Love", "Vastu", "Healing Rituals", "Meditation", "Spiritual Wisdom"
 ];
 
 const Hero = () => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    // Delay to simulate smooth entrance
+    const timeout = setTimeout(() => setAnimate(true), 100);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <div className="hero">
       <NavBar />
       <div className="hero-container">
         <div className="hero-content">
-          <div className="hero-text">
-          <h1 className="hero-title">
+          <div className={`hero-text ${animate ? 'animate-in' : ''}`}>
+            <h1 className="hero-title">
               AI for Your{" "}
               <span className="dropping-texts">
                 {rotatingWords.map((word, index) => (
@@ -38,7 +36,7 @@ const Hero = () => {
               from Ancient Wisdom enabled by AI
             </p>
           </div>
-          <div className="hero-image">
+          <div className={`hero-image ${animate ? 'animate-in' : ''}`}>
             <img src={wellnessImage} alt="Wellness Visual" />
           </div>
         </div>

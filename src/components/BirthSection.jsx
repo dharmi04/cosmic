@@ -73,7 +73,7 @@ const BirthSection = () => {
       </p>
 
  <div className="model-wrapper">
-             <Canvas camera={{ position: [0, 0, 5], fov: 24 }}>
+             <Canvas camera={{ position: [0, 0, 5], fov: 20 }}>
                <ambientLight />
                <directionalLight 
   position={[2, 2, 5]} 

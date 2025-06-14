@@ -5,14 +5,12 @@ import logo from '../assets/logo.png';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { Center } from '@react-three/drei';
-
+import { Parallax } from 'react-scroll-parallax';
 const BirthSection = () => {
   const sectionRef = useRef();
   const [inView, setInView] = useState(false);
-  
-
   useEffect(() => {
-    
+      
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -40,12 +38,13 @@ const BirthSection = () => {
       <div className={`self-care-button`}>
         SELF-CARE
       </div>
-
+      <Parallax speed={-10}>
       <p className={`main-text fade-in-left ${inView ? 'in-view' : ''}`}>
         Your birth determines exact positions of celestial bodies and<br />
         your physiological features!
       </p>
-
+      </Parallax>
+      <Parallax speed={-10}>
       <div className={`model-wrapper fade-in-right ${inView ? 'in-view' : ''}`}>
         <Canvas camera={{ position: [0, 0, 5], fov: 20 }}>
           <ambientLight />
@@ -63,6 +62,7 @@ const BirthSection = () => {
           </Suspense>
         </Canvas>
       </div>
+      </Parallax>
     </div>
   );
 };

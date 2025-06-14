@@ -9,8 +9,10 @@ import { Center } from '@react-three/drei';
 const BirthSection = () => {
   const sectionRef = useRef();
   const [inView, setInView] = useState(false);
+  
 
   useEffect(() => {
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

@@ -51,7 +51,7 @@ export function Model(props) {
     <group {...props} dispose={null} position={[0, -0.5, 0]} scale={layout.scale}>
 
       {/* LEFT: Place of Birth */}
-      <Float speed={2} rotationIntensity={0.2} floatIntensity={0.3}>
+      <Float speed={0} rotationIntensity={0} floatIntensity={0}>
       <group position={layout.left}>
         <mesh geometry={nodes.Curve446.geometry} material={materials['SVGMat.017']} rotation={[Math.PI / 2, 0, 0]} scale={14.983} position={[-1.87, 0.93, -2.753]} />
         <mesh geometry={nodes.Curve447.geometry} material={nodes.Curve447.material} rotation={[Math.PI / 2, 0, 0]} scale={12.983} position={[-1.871, 0.504, -2.753]} />
@@ -62,7 +62,7 @@ export function Model(props) {
       </group>
       </Float>
       {/* CENTER: Birth Name */}
-      <Float speed={2} rotationIntensity={0.3} floatIntensity={0.35}>
+      <Float speed={0} rotationIntensity={0} floatIntensity={0}>
       <group position={layout.center}>
         <mesh geometry={nodes.Curve581.geometry} material={nodes.Curve581.material} rotation={[Math.PI / 2, 0, 0]} scale={18.427} position={[-0.329, 1.216, -3.524]} />
         <mesh geometry={nodes.Curve707.geometry} material={materials['SVGMat.010']} rotation={[Math.PI / 2, 0, 0]} scale={15.513} position={[0.018, 1.125, -3.559]} />
@@ -79,7 +79,7 @@ export function Model(props) {
       </group>
       </Float>
       {/* RIGHT: Date of Birth */}
-      <Float speed={2} rotationIntensity={0.25} floatIntensity={0.3}>
+      <Float speed={0} rotationIntensity={0} floatIntensity={0}>
       <group position={layout.right}>
         <mesh geometry={nodes.Curve718.geometry} material={materials['SVGMat.014']} rotation={[Math.PI / 2, 0, 0]} scale={14.547} position={[0.78, 1.025, -0.159]} />
         <mesh geometry={nodes.Curve719.geometry} material={nodes.Curve719.material} rotation={[Math.PI / 2, 0, 0]} scale={13.547} position={[0.779, 0.622, -0.159]} />

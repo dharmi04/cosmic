@@ -39,7 +39,7 @@ const BirthSection = () => {
       <div className={`self-care-button`}>
         SELF-CARE
       </div>
-      <Parallax speed={-10}  scale={[0.8, 1]}>
+      <Parallax  scale={[0.5, 1]}>
       <p className={`main-text fade-in-left ${inView ? 'in-view' : ''}`}>
         Your birth determines exact positions of celestial bodies and<br />
         your physiological features!

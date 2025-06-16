@@ -29,7 +29,8 @@ const BirthSection = () => {
   }, []);
 
   return (
-    <div className="birth-section" ref={sectionRef}>
+    <div>
+<div className="birth-section" ref={sectionRef}>
       <div className="top-bar">
         <img src={logo} alt="logo" className="logo" />
         <a href="#" className="aiyuh-btn">AIYUH ↗</a>
@@ -64,6 +65,27 @@ const BirthSection = () => {
       </div>
       </Parallax>
     </div>
+    <div className='third-part'>
+    <div className="top-bar">
+        <img src={logo} alt="logo" className="logo" />
+        <a href="#" className="aiyuh-btn">AIYUH ↗</a>
+      </div>
+
+      <div className={`self-care-button`}>
+        SELF-CARE
+      </div>
+      <Parallax speed={-7}>
+      <p className={`main-text fade-in-left ${inView ? 'in-view' : ''}`}>
+      Your journey is defined by the actions you take.
+      </p>
+      </Parallax>
+
+      <div>
+        {/* Imahessss */}
+      </div>
+    </div>
+    </div>
+    
   );
 };
 

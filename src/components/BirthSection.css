@@ -54,6 +54,8 @@
   line-height: 1.6;
   font-family: 'Recoleta';
   color:rgba(196, 248, 255, 1);
+  font-feature-settings: "liga" 0, "clig" 0;
+  font-variant-ligatures: none;
 
 }
 

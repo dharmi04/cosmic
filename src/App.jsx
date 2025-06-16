@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from "./components/Hero";
 import BirthSection from "./components/BirthSection";
 import { ParallaxProvider } from 'react-scroll-parallax';
+import './App.css'
 
 //import SceneCanvas from "./components/SceneCanvas";
 

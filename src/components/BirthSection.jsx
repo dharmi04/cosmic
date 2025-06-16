@@ -39,13 +39,13 @@ const BirthSection = () => {
       <div className={`self-care-button`}>
         SELF-CARE
       </div>
-      <Parallax speed={-10}>
+      <Parallax speed={-10}  scale={[0.8, 1]}>
       <p className={`main-text fade-in-left ${inView ? 'in-view' : ''}`}>
         Your birth determines exact positions of celestial bodies and<br />
         your physiological features!
       </p>
       </Parallax>
-      <Parallax speed={-10}>
+      <Parallax speed={-10}  >
       <div className={`model-wrapper fade-in-right ${inView ? 'in-view' : ''}`}>
         <Canvas camera={{ position: [0, 0, 5], fov: 20 }}>
           <ambientLight />

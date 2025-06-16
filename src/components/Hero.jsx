@@ -42,7 +42,7 @@ const Hero = () => {
             </Parallax>
           </div>
           <div className={`hero-image ${animate ? 'animate-in' : ''}`}>
-          <Parallax speed={-10}>
+          <Parallax speed={-10} rotate={[0,360]}>
             <img src={wellnessImage} alt="Wellness Visual" />
             </Parallax>
           </div>

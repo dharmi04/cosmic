@@ -187,11 +187,11 @@
   .hero-image {
     order: -1; /* Move image above text on mobile */
     max-width: 300px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
   }
   
   .dropping-texts {
-    vertical-align: -12px;
+    vertical-align: -3px;
     min-width: 150px;
   }
 }
@@ -218,7 +218,7 @@
   }
   
   .dropping-texts {
-    vertical-align: -12px;
+    vertical-align: -15px;
     min-width: 120px;
     font-size: 18px;
   }

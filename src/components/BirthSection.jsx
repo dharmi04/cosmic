@@ -6,6 +6,7 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { Center } from '@react-three/drei';
 import { Parallax } from 'react-scroll-parallax';
+
 const BirthSection = () => {
   const sectionRef = useRef();
   const [inView, setInView] = useState(false);
@@ -65,25 +66,7 @@ const BirthSection = () => {
       </div>
       </Parallax>
     </div>
-    <div className='third-part'>
-    <div className="top-bar">
-        <img src={logo} alt="logo" className="logo" />
-        <a href="#" className="aiyuh-btn">AIYUH ↗</a>
-      </div>
-
-      <div className={`self-care-button`}>
-        SELF-CARE
-      </div>
-      <Parallax speed={-7}>
-      <p className={`main-text fade-in-left ${inView ? 'in-view' : ''}`}>
-      Your journey is defined by the actions you take.
-      </p>
-      </Parallax>
-
-      <div>
-        {/* Imahessss */}
-      </div>
-    </div>
+    
     </div>
     
   );

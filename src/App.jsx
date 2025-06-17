@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import BirthSection from "./components/BirthSection";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import './App.css'
+import ThirdPart from './components/ThirdPart';
 
 //import SceneCanvas from "./components/SceneCanvas";
 
@@ -14,7 +15,9 @@ function App() {
       <ParallaxProvider>
       <Hero />
       <BirthSection/>
+      <ThirdPart />
       </ParallaxProvider>
+
 
             {/* <BirthOptions /> */}
     

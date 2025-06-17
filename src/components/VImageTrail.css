@@ -1,0 +1,71 @@
+.v-container {
+  position: relative;
+  width: 100%;
+  min-height: 200vh;
+  padding-bottom: 160px;
+  overflow: visible;
+}
+
+.trail-image {
+  position: absolute;
+  width: 130px;
+  max-width: 25vw;
+  height: auto;
+  border-radius: 0px;
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); */
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+.trail-image:hover {
+  transform: scale(1.05);
+}
+
+.center-ball {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: auto;
+  z-index: 99;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .trail-image {
+    width: 100px;
+    max-width: 30vw;
+  }
+
+  .center-ball {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trail-image {
+    width: 80px;
+    max-width: 35vw;
+  }
+
+  .center-ball {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trail-image {
+    width: 65px;
+    max-width: 42vw;
+  }
+
+  .center-ball {
+    width: 65px;
+    bottom: 70%;
+  }
+
+  .v-container {
+    padding-bottom: 120px;
+  }
+}

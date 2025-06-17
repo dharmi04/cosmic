@@ -31,7 +31,6 @@ const ThirdPart = () => {
       return () => observer.disconnect();
     }, []);
   return (
-    <div>
       <div className='third-part'>
     <div className="top-bar">
         <img src={logo} alt="logo" className="logo" />
@@ -48,7 +47,6 @@ const ThirdPart = () => {
       <div>
         <VImageTrail />
       </div>
-    </div>
     </div>
   )
 }

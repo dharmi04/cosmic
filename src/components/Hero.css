@@ -198,6 +198,31 @@
 
 /* Mobile portrait */
 @media (max-width: 480px) {
+  .dropping-texts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 19px; /* Move it down */
+    margin-bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    min-width: unset;
+    vertical-align: 0;
+  }
+  
+  .dropping-texts > div {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: center;
+    margin-left: 0 !important;
+  }
+
+  
   .hero-container {
     padding: 0 15px;
     margin-top: 10px;
@@ -210,7 +235,7 @@
   .hero-title {
     letter-spacing: -0.5px;
     margin-bottom: 0.75rem;
-    font-size: 20px;
+    font-size: 22px;
   }
   
   .hero-image {

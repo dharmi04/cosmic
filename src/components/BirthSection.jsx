@@ -31,6 +31,8 @@ const BirthSection = () => {
 
   return (
     <div>
+      
+{/* <div className="fade-divider"></div> */}
 <div className="birth-section" ref={sectionRef}>
       <div className="top-bar">
         <img src={logo} alt="logo" className="logo" />

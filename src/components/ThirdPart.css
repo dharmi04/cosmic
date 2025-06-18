@@ -112,3 +112,11 @@
   transform: translateX(60px);
 }
 
+
+
+.model-canvas-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}

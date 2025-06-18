@@ -14,6 +14,7 @@ function App() {
       {/* <NavBar /> */}
       <ParallaxProvider>
       <Hero />
+      
       <BirthSection/>
       <ThirdPart />
       </ParallaxProvider>

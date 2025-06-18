@@ -1,0 +1,329 @@
+/* AstrologicalWheel.css */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap');
+
+.astro-wheel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #0f172a 0%, #134e4a 50%, #1e293b 100%); */
+  padding: 2rem;
+  font-family: 'Cinzel', serif;
+}
+
+.wheel-wrapper {
+  position: relative;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
+}
+
+.astro-wheel {
+  /* background: radial-gradient(circle at center, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%); */
+  border-radius: 50%;
+  animation: subtleGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes subtleGlow {
+  0% {
+    filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.3));
+  }
+  100% {
+    filter: drop-shadow(0 0 40px rgba(34, 211, 238, 0.6));
+  }
+}
+
+/* Circle styles */
+.outer-circle {
+  fill: url(#wheelGradient);
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 2;
+}
+
+.zodiac-ring {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 1;
+}
+
+.inner-circle {
+  fill: url(#centerGradient);
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 1;
+}
+
+.center-circle {
+  fill: rgba(0, 30, 50, 0.9);
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 2;
+}
+
+/* Line styles */
+.division-line {
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 1;
+}
+
+.cross-line {
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 1;
+}
+
+/* Zodiac symbols */
+.zodiac-symbol {
+  text-anchor: middle;
+  fill: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+  font-weight: 600;
+  user-select: none;
+  transition: all 0.3s ease;
+  font-family: 'Cinzel', serif;
+}
+
+.zodiac-symbol:hover {
+  fill: rgba(34, 211, 238, 1);
+  filter: url(#glow);
+  transform: scale(1.2);
+}
+
+/* Zodiac sign specific colors */
+.zodiac-symbol[data-sign="aries"] { fill: #ff6b6b; }
+.zodiac-symbol[data-sign="taurus"] { fill: #4ecdc4; }
+.zodiac-symbol[data-sign="gemini"] { fill: #45b7d1; }
+.zodiac-symbol[data-sign="cancer"] { fill: #96ceb4; }
+.zodiac-symbol[data-sign="leo"] { fill: #ffeaa7; }
+.zodiac-symbol[data-sign="virgo"] { fill: #dda0dd; }
+.zodiac-symbol[data-sign="libra"] { fill: #98d8c8; }
+.zodiac-symbol[data-sign="scorpio"] { fill: #f7dc6f; }
+.zodiac-symbol[data-sign="sagittarius"] { fill: #bb8fce; }
+.zodiac-symbol[data-sign="capricorn"] { fill: #85c1e9; }
+.zodiac-symbol[data-sign="aquarius"] { fill: #f8c471; }
+.zodiac-symbol[data-sign="pisces"] { fill: #82e0aa; }
+
+/* Planets group */
+.planets-group {
+  animation: rotateSlowly 120s linear infinite;
+}
+
+@keyframes rotateSlowly {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Planet orbits */
+.planet-orbit {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 1;
+  stroke-dasharray: 2, 2;
+  opacity: 0.5;
+}
+
+/* Planet circles */
+.planet {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  stroke-width: 2;
+}
+
+.planet.active {
+  fill: rgba(34, 211, 238, 0.8);
+  stroke: rgba(34, 211, 238, 1);
+  filter: url(#glow);
+}
+
+.planet.inactive {
+  fill: rgba(100, 100, 100, 0.6);
+  stroke: rgba(150, 150, 150, 0.8);
+}
+
+.planet.hovered {
+  transform: scale(1.3);
+  filter: url(#glow);
+}
+
+/* Planet-specific colors */
+.planet[data-planet="sun"] {
+  fill: #ffd700;
+  stroke: #ffed4e;
+}
+
+.planet[data-planet="moon"] {
+  fill: #c0c0c0;
+  stroke: #e8e8e8;
+}
+
+.planet[data-planet="mercury"] {
+  fill: #ffa500;
+  stroke: #ffb347;
+}
+
+.planet[data-planet="venus"] {
+  fill: #ff69b4;
+  stroke: #ff91c7;
+}
+
+.planet[data-planet="mars"] {
+  fill: #ff4500;
+  stroke: #ff6347;
+}
+
+.planet[data-planet="jupiter"] {
+  fill: #4169e1;
+  stroke: #6495ed;
+}
+
+.planet[data-planet="saturn"] {
+  fill: #8b4513;
+  stroke: #cd853f;
+}
+
+.planet[data-planet="uranus"] {
+  fill: #40e0d0;
+  stroke: #7fffd4;
+}
+
+.planet[data-planet="neptune"] {
+  fill: #4682b4;
+  stroke: #87ceeb;
+}
+
+.planet[data-planet="pluto"] {
+  fill: #800080;
+  stroke: #9370db;
+}
+
+/* Planet symbols */
+.planet-symbol {
+  text-anchor: middle;
+  font-size: 14px;
+  font-weight: bold;
+  user-select: none;
+  pointer-events: none;
+  font-family: 'Cinzel', serif;
+}
+
+.planet-symbol.active {
+  fill: rgba(255, 255, 255, 0.9);
+  filter: url(#glow);
+}
+
+.planet-symbol.inactive {
+  fill: rgba(200, 200, 200, 0.6);
+}
+
+/* Center decoration */
+.center-decoration {
+  opacity: 0.6;
+}
+
+.center-inner {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 1;
+  stroke-dasharray: 3, 3;
+  animation: rotateSlowly 60s linear infinite reverse;
+}
+
+.center-middle {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 1;
+  stroke-dasharray: 5, 5;
+  animation: rotateSlowly 90s linear infinite;
+}
+
+.center-outer {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 1;
+  stroke-dasharray: 7, 7;
+  animation: rotateSlowly 120s linear infinite reverse;
+}
+
+/* Tooltip */
+.planet-tooltip {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(34, 211, 238, 0.5);
+  backdrop-filter: blur(10px);
+  font-family: 'Cinzel', serif;
+  pointer-events: none;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.planet-tooltip h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: rgba(34, 211, 238, 1);
+  font-weight: 600;
+}
+
+.planet-tooltip p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .astro-wheel-container {
+    padding: 1rem;
+  }
+  
+  .astro-wheel {
+    width: 90vw;
+    height: 90vw;
+    max-width: 500px;
+    max-height: 500px;
+  }
+  
+  .zodiac-symbol {
+    font-size: 20px;
+  }
+  
+  .planet-symbol {
+    font-size: 12px;
+  }
+  
+  .planet-tooltip {
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .astro-wheel {
+    width: 95vw;
+    height: 95vw;
+    max-width: 400px;
+    max-height: 400px;
+  }
+  
+  .zodiac-symbol {
+    font-size: 18px;
+  }
+  
+  .planet-symbol {
+    font-size: 10px;
+  }
+}

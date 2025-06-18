@@ -5,11 +5,11 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { Center } from '@react-three/drei';
 import { Parallax } from 'react-scroll-parallax';
-import VImageTrail from './VImageTrail';
-
+// import VImageTrail from './VImageTrail';
+import Model from './Model/Model2.jsx';
+import AstrologicalWheel from './AstrologicalWheel';
 
 const ThirdPart = () => {
-
     const sectionRef = useRef();
     const [inView, setInView] = useState(false);
     useEffect(() => {
@@ -36,16 +36,26 @@ const ThirdPart = () => {
         <img src={logo} alt="logo" className="logo" />
         <a href="#" className="aiyuh-btn">AIYUH ↗</a>
       </div>
-
       <div className={`self-care-button`}>
         SELF-CARE
       </div>
       <p className="main-text">
       Your journey is defined by the actions you take.
       </p>
-
       <div>
-        <VImageTrail />
+      <div className="model-canvas-container">
+  <Canvas camera={{ position: [0, 0, 10], fov: 65 }}>
+    <Suspense fallback={null}>
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[5, 5, 5]} intensity={1} />
+      <Center>
+      <Model rotation={[Math.PI / 2, 0, 0]} /> 
+</Center>
+    </Suspense>
+  </Canvas>
+</div>
+{/* <AstrologicalWheel /> */}
+        {/* <VImageTrail /> */}
       </div>
     </div>
   )

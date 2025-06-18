@@ -19,7 +19,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero">
+    <div>
+<div className="hero">
       <NavBar />
       <div className="hero-container">
         <div className="hero-content">
@@ -48,7 +49,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      
     </div>
+    
+    </div>
+    
   );
 };
 

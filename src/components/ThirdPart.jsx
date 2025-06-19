@@ -40,7 +40,7 @@ const ThirdPart = () => {
         <a href="#" className="aiyuh-btn">AIYUH ↗</a>
       </div>
       <div className={`self-care-button`}>
-        SELF-CARE
+      <span className="self-care-text">SELF-CARE</span>
       </div>
       <p className="main-text">
       Your journey is defined by the actions you take.

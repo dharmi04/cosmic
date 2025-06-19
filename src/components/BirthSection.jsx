@@ -45,8 +45,8 @@ const BirthSection = () => {
         <a href="#" className="aiyuh-btn">AIYUH ↗</a>
       </div>
 
-      <div className={`self-care-button`}>
-        SELF-CARE
+      <div className={`self-care-button fade-in-down ${inView ? 'in-view' : ''}`}>
+      <span className="self-care-text">SELF-CARE</span>
       </div>
       {/* <Parallax  scale={[0.5, 1]}> */}
       <p className={`main-text fade-in-left ${inView ? 'in-view' : ''}`}>

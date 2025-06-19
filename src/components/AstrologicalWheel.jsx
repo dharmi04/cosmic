@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './AstrologicalWheel.css';
 
 // Zodiac images
@@ -15,7 +15,7 @@ import capricorn from '../assets/zodiac/Frame-9.png';
 import aquarius from '../assets/zodiac/Frame-10.png';
 import pisces from '../assets/zodiac/Frame-11.png';
 
-// Planet images'
+// Planet images
 import sun from '../assets/planets/aquarius.png';
 import moon from '../assets/planets/cancer.png';
 import mercury from '../assets/planets/capricorn.png';
@@ -26,8 +26,7 @@ import saturn from '../assets/planets/gemini.png';
 import uranus from '../assets/planets/leo.png';
 import neptune from '../assets/planets/libra.png';
 import pluto from '../assets/planets/sagittarius.png';
-import image1 from '../assets/planets/virgo.png';
-
+import centerImage from '../assets/planets/virgo.png';
 
 const zodiacSigns = [
   { name: 'Aries', image: aries, angle: 0 },
@@ -58,15 +57,7 @@ const planets = [
 ];
 
 const AstrologicalWheel = () => {
-  const [rotation, setRotation] = useState(0);
   const [hoveredPlanet, setHoveredPlanet] = useState(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRotation(prev => (prev + 0.05) % 360);
-    }, 50);
-    return () => clearInterval(interval);
-  }, []);
 
   const getPosition = (angle, distance) => {
     const radian = (angle * Math.PI) / 180;
@@ -80,12 +71,31 @@ const AstrologicalWheel = () => {
     <div className="astro-wheel-container">
       <div className="wheel-wrapper">
         <svg width="600" height="600" viewBox="0 0 600 600" className="astro-wheel">
+          {/* Circles */}
           <circle cx="300" cy="300" r="280" className="outer-circle" />
           <circle cx="300" cy="300" r="220" className="zodiac-ring" />
           <circle cx="300" cy="300" r="160" className="inner-circle" />
-          <circle cx="300" cy="300" r="80" className="center-circle" />
 
-          {zodiacSigns.map((sign, index) => {
+          {/* Spokes */}
+          {zodiacSigns.map(sign => {
+            const rad = (sign.angle * Math.PI) / 180;
+            const x = 300 + Math.cos(rad) * 280;
+            const y = 300 + Math.sin(rad) * 280;
+            return (
+              <line
+                key={`line-${sign.name}`}
+                x1="300"
+                y1="300"
+                x2={x}
+                y2={y}
+                stroke="#aaa"
+                strokeWidth="1"
+              />
+            );
+          })}
+
+          {/* Zodiac signs (static) */}
+          {zodiacSigns.map(sign => {
             const pos = getPosition(sign.angle + 15, 250);
             return (
               <image
@@ -99,29 +109,34 @@ const AstrologicalWheel = () => {
             );
           })}
 
-          <g 
-            className="planets-group" 
-            style={{ transform: `rotate(${rotation}deg)`, transformOrigin: '300px 300px' }}
-          >
-            {planets.map((planet, index) => {
-              const pos = getPosition(planet.angle, planet.distance);
-              const isHovered = hoveredPlanet === planet.name;
+          {/* Planets (now static too) */}
+          {planets.map(planet => {
+            const pos = getPosition(planet.angle, planet.distance);
+            const isHovered = hoveredPlanet === planet.name;
 
-              return (
-                <image
-                  key={planet.name}
-                  href={planet.image}
-                  x={300 + pos.x - 12}
-                  y={300 - pos.y - 12}
-                  width="24"
-                  height="24"
-                  className={`planet-img ${planet.active ? 'active' : 'inactive'} ${isHovered ? 'hovered' : ''}`}
-                  onMouseEnter={() => setHoveredPlanet(planet.name)}
-                  onMouseLeave={() => setHoveredPlanet(null)}
-                />
-              );
-            })}
-          </g>
+            return (
+              <image
+                key={planet.name}
+                href={planet.image}
+                x={300 + pos.x - 12}
+                y={300 - pos.y - 12}
+                width="24"
+                height="24"
+                className={`planet-img ${planet.active ? 'active' : 'inactive'} ${isHovered ? 'hovered' : ''}`}
+                onMouseEnter={() => setHoveredPlanet(planet.name)}
+                onMouseLeave={() => setHoveredPlanet(null)}
+              />
+            );
+          })}
+
+          {/* Center image */}
+          <image
+            href={centerImage}
+            x={300 - 40}
+            y={300 - 40}
+            width="80"
+            height="80"
+          />
         </svg>
 
         {hoveredPlanet && (

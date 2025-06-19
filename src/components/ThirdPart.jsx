@@ -49,11 +49,12 @@ const ThirdPart = () => {
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       <Center>
-      <Model rotation={[Math.PI / 2, 0, 0]} /> 
-</Center>
+      <Model rotation={[-Math.PI / 2, Math.PI, 2*Math.PI]} /> {/* initial rotation */}
+      </Center>
     </Suspense>
   </Canvas>
 </div>
+
 {/* <AstrologicalWheel /> */}
         {/* <VImageTrail /> */}
       </div>

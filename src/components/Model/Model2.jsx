@@ -11,7 +11,7 @@ export function Model2(props) {
   const { nodes, materials } = useGLTF(model);
   useFrame(() => {
     if (modelRef.current) {
-      modelRef.current.rotation.z += 0.1; // adjust speed as needed
+      modelRef.current.rotation.y += 0.1; // adjust speed as needed
     }
   });
   return (

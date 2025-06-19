@@ -2,10 +2,10 @@ import React from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF, Stars } from '@react-three/drei';
 import { useRef } from 'react';
-
+import model from '../assets/3d/new.glb'
 function CustomModel({ position, index }) {
   const ref = useRef();
-  const { scene } = useGLTF('/models/new.glb');
+  const { scene } = useGLTF(model);
 
   useFrame((state) => {
     if (ref.current) {

@@ -9,7 +9,13 @@ const rotatingWords = [
   "Numerology", "Love", "Vastu", "Healing Rituals", "Meditation", "Spiritual Wisdom"
 ];
 
-const Hero = () => {
+const Hero = ({ scrollToRef }) => {
+  const scrollToNext = () => {
+    const nextSection = document.querySelector('.birth-section'); // ID or class of next component
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -50,8 +56,8 @@ const Hero = () => {
         </div>
       </div>
       
+    <button onClick={scrollToNext} className="scroll-button">↓</button>
     </div>
-    
     </div>
     
   );

@@ -8,6 +8,12 @@ import { Center } from '@react-three/drei';
 import { Parallax } from 'react-scroll-parallax';
 
 const BirthSection = () => {
+  const scrollToNext = () => {
+    const nextSection = document.querySelector('.third-part'); // ID or class of next component
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const sectionRef = useRef();
   const [inView, setInView] = useState(false);
   useEffect(() => {
@@ -28,12 +34,12 @@ const BirthSection = () => {
 
     return () => observer.disconnect();
   }, []);
-
+  
   return (
     <div>
       
 {/* <div className="fade-divider"></div> */}
-<div className="birth-section" ref={sectionRef}>
+<div className="birth-section" ref={sectionRef} id='birth-section'>
       <div className="top-bar">
         <img src={logo} alt="logo" className="logo" />
         <a href="#" className="aiyuh-btn">AIYUH ↗</a>
@@ -67,8 +73,8 @@ const BirthSection = () => {
         </Canvas>
       </div>
       </Parallax>
+    <button onClick={scrollToNext} className="scroll-button">↓</button>
     </div>
-    
     </div>
     
   );

@@ -7,7 +7,10 @@ import { Center } from '@react-three/drei';
 import { Parallax } from 'react-scroll-parallax';
 // import VImageTrail from './VImageTrail';
 import Model from './Model/Model2.jsx';
+import Model3 from './Model/Model3.jsx';
 import AstrologicalWheel from './AstrologicalWheel';
+import { Float } from '@react-three/drei';
+
 
 const ThirdPart = () => {
     const sectionRef = useRef();
@@ -31,7 +34,7 @@ const ThirdPart = () => {
       return () => observer.disconnect();
     }, []);
   return (
-      <div className='third-part'>
+      <div className='third-part' id='third-part'>
     <div className="top-bar">
         <img src={logo} alt="logo" className="logo" />
         <a href="#" className="aiyuh-btn">AIYUH ↗</a>
@@ -48,12 +51,21 @@ const ThirdPart = () => {
     <Suspense fallback={null}>
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
-      <Center>
-      <Model rotation={[-Math.PI / 2, Math.PI, 2*Math.PI]} /> {/* initial rotation */}
-      </Center>
+      {/* <Float rotationIntensity={1} floatIntensity={0}> */}
+
+      <Model
+        position={[-4, 0, 0]} // Move to the left
+        rotation={[-Math.PI / 2, Math.PI, 2 * Math.PI]}
+      />
+      {/* </Float> */}
+      <Model3
+        position={[10, 4, 0]} // Move to the right
+        rotation={[-Math.PI, Math.PI,   2*Math.PI]}
+      />
     </Suspense>
   </Canvas>
 </div>
+
 
 {/* <AstrologicalWheel /> */}
         {/* <VImageTrail /> */}

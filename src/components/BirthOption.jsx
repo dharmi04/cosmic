@@ -26,8 +26,15 @@ const BirthOptions = () => {
     // Handle form submission here
   };
 
+  const scrollToNext = () => {
+    const nextSection = document.querySelector('.third-part'); // ID or class of next component
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const [animate,
   return (
-    <div className="birth-container">
+    <div className="birth-container" id='birth-section'>
       <form className="birth-form" onSubmit={handleSubmit}>
         <div className="form-title">
           <h2>Birth Information</h2>

@@ -9,7 +9,7 @@ import ThirdPart from './components/ThirdPart';
 
 function App() {
   return (
-    <div style={{ position: 'relative', minHeight: '100vh' }}>
+    <div style={{ position: 'relative', minHeight: '100vh' }} className="scroll-container">
       {/* <MouseLightEffect /> */}
       {/* <NavBar /> */}
       <ParallaxProvider>

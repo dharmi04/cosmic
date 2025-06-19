@@ -10,7 +10,7 @@
   font-family: 'Aquire', sans-serif;
   color: white;
   overflow: hidden;
-  -webkit-mask: linear-gradient(to bottom, 
+  /* -webkit-mask: linear-gradient(to bottom, 
   transparent 0%, 
   black 40%, 
   black 100%
@@ -19,7 +19,7 @@ mask: linear-gradient(to bottom,
   transparent 0%, 
   black 40%, 
   black 100%
-); 
+);  */
 
   
 }
@@ -61,7 +61,7 @@ mask: linear-gradient(to bottom,
   z-index: 20;
 }
 
- .birth-section::before {
+ /* .birth-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -77,7 +77,7 @@ mask: linear-gradient(to bottom,
   z-index: 1;
   pointer-events: none;
   
-}
+} */
 
 
 

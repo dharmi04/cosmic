@@ -31,7 +31,7 @@ const Hero = ({ scrollToRef }) => {
       <div className="hero-container">
         <div className="hero-content">
           <div className={`hero-text ${animate ? 'animate-in' : ''}`}>
-          <Parallax speed={-10}>
+          {/* <Parallax speed={-10}> */}
             <h1 className="hero-title">
               AI for Your{" "}
               <span className="dropping-texts">
@@ -40,23 +40,32 @@ const Hero = ({ scrollToRef }) => {
                 ))}
               </span>
             </h1>
-            </Parallax>
-            <Parallax speed={-10}>
+            {/* </Parallax>
+            <Parallax speed={-10}> */}
             <p className="hero-subtitle">
               Awakening 2.0: Discover Holistic Self-Care<br />
               from Ancient Wisdom enabled by AI
             </p>
-            </Parallax>
+            {/* </Parallax> */}
           </div>
           <div className={`hero-image ${animate ? 'animate-in' : ''}`}>
-          <Parallax speed={-10}>
+          {/* <Parallax speed={-10}> */}
             <img src={wellnessImage} alt="Wellness Visual" />
-            </Parallax>
+            {/* </Parallax> */}
           </div>
         </div>
       </div>
       
-    <button onClick={scrollToNext} className="scroll-button">↓</button>
+      <div className="scroll-indicator" onClick={scrollToNext}>
+  {/* <span className="scroll-text">SCROLL</span> */}
+  <div className="scroll-icon">
+    <div className="mouse">
+      <div className="wheel"></div>
+    </div>
+    <div className="arrow-down">↓</div>
+  </div>
+</div>
+
     </div>
     </div>
     

@@ -48,13 +48,13 @@ const BirthSection = () => {
       <div className={`self-care-button`}>
         SELF-CARE
       </div>
-      <Parallax  scale={[0.5, 1]}>
+      {/* <Parallax  scale={[0.5, 1]}> */}
       <p className={`main-text fade-in-left ${inView ? 'in-view' : ''}`}>
         Your birth determines exact positions of celestial bodies and<br />
         your physiological features!
       </p>
-      </Parallax>
-      <Parallax speed={-10}  >
+      {/* </Parallax>
+      <Parallax speed={-10}  > */}
       <div className={`model-wrapper fade-in-right ${inView ? 'in-view' : ''}`}>
         <Canvas camera={{ position: [0, 0, 5], fov: 20 }}>
           <ambientLight />
@@ -72,8 +72,16 @@ const BirthSection = () => {
           </Suspense>
         </Canvas>
       </div>
-      </Parallax>
-    <button onClick={scrollToNext} className="scroll-button">↓</button>
+      {/* </Parallax> */}
+      <div className="scroll-indicator" onClick={scrollToNext}>
+  {/* <span className="scroll-text">SCROLL</span> */}
+  <div className="scroll-icon">
+    <div className="mouse">
+      <div className="wheel"></div>
+    </div>
+    <div className="arrow-down">↓</div>
+  </div>
+</div>
     </div>
     </div>
     

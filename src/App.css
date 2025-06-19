@@ -19,31 +19,10 @@ html,body {
   width: 100vw;
   height: 100vh;
 } */
-.snap-container {
+.fullpage-section {
   height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
-
-.snap-container > * {
   scroll-snap-align: start;
-  height: 100vh;
-}
-
-.scroll-container {
-  height: 100vh;       /* full viewport height */
-  overflow-y: scroll;  /* vertical scroll */
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth; /* smooth scrolling */
-}
-
-
-.section {
-  scroll-snap-align: start;
-  height: 100vh;       /* full viewport height */
-  /* Optional styling */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-shrink: 0;
+  will-change: transform;
+  transform: translateZ(0);
 }

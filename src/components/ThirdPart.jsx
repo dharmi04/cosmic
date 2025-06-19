@@ -34,7 +34,7 @@ const ThirdPart = () => {
       return () => observer.disconnect();
     }, []);
   return (
-      <div className='third-part' id='third-part'>
+      <div className='third-part ' id='third-part'>
     <div className="top-bar">
         <img src={logo} alt="logo" className="logo" />
         <a href="#" className="aiyuh-btn">AIYUH ↗</a>

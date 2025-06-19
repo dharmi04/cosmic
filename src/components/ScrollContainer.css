@@ -1,0 +1,21 @@
+.fullpage-scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .fullpage-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .fullpage-section {
+    height: 100vh;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    will-change: transform;
+    transform: translateZ(0);
+  }
+  
